@@ -25,13 +25,8 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-                <data android:scheme="https" android:host="template.artenes.dev"/>
             </intent-filter>
         </activity>
-        <service android:name=".app.samples.services.TimerService" android:foregroundServiceType="specialUse">
-            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
-                android:value="Countdown Timer with sound"/>
-        </service>
     </application>
 
 </manifest>

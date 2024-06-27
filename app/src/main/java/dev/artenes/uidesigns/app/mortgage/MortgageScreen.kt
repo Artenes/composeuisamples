@@ -43,7 +43,7 @@ import androidx.compose.ui.unit.sp
 import dev.artenes.uidesigns.R
 
 /**
- * Design from https://www.frontendmentor.io/challenges/mortgage-repayment-calculator-Galx1LXK73/hub
+ * Design from https://www.frontendmentor.io/challenges/mortgage-repayment-calculator-Galx1LXK73
  */
 @Preview
 @Composable

@@ -1,14 +1,21 @@
-Android Start Template
-==================
+# Ui building exercies
 
-To start a new project:
+A bunch of simple samples of UI made using compose to practice UI building using only compose components.
 
-- Update project name in ``settings.gradle``
-- Update package structure at folder ``app/src/main/java``
-- Then update package name at ``app/build.gradle``
+# Current samples
 
-Structure:
+## SignIn/SignUp/Dashboard
 
-- core module - pure kotlin module to store only your business logics and interfaces that your app will implement
-- android module - android library to store any interaction with the framework. core module will have all the interfaces and android module will implement any of those that needs interaction with the framework
-- app module - where you will bring together the core and android modules to make the application works. This module will not interact with the framework, only with libs and the core/android module.
+<p float="left">
+  <img src="screenshots/dashboard.png" width="300">
+  <img src="screenshots/signin.png" width="300">
+  <img src="screenshots/signup.png" width="300">
+</p>
+
+Design by [Ui Lover Android](https://www.youtube.com/watch?v=RKBmNNovvjE&t=4s)
+
+## Mortgage calculator
+
+<img src="screenshots/mortgage.gif" width="300">
+
+Design by [Frontend Mentor](https://www.frontendmentor.io/challenges/mortgage-repayment-calculator-Galx1LXK73)
