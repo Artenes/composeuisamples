@@ -2,7 +2,6 @@ package dev.artenes.uidesigns.app.theme
 
 import android.app.Activity
 import android.os.Build
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
@@ -50,14 +49,15 @@ fun MyApplicationTheme(
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
+
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
-            (view.context as Activity).window.statusBarColor = Color(0XFFea6d35).toArgb()
-            ViewCompat.getWindowInsetsController(view)?.isAppearanceLightStatusBars = false
+            (view.context as Activity).window.statusBarColor = Color.White.toArgb()
+            ViewCompat.getWindowInsetsController(view)?.isAppearanceLightStatusBars = true
         }
     }
 

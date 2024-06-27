@@ -1,16 +1,23 @@
-package dev.artenes.uidesigns.app
+package dev.artenes.uidesigns.app.dashboard
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import dev.artenes.uidesigns.app.mortgage.MortgageScreen
 
 @Composable
 fun MainNavigation() {
 
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = "signin") {
+    NavHost(navController = navController, startDestination = "mortgage") {
+
+        composable("mortgage") {
+
+            MortgageScreen()
+
+        }
 
         composable("dashboard") {
 

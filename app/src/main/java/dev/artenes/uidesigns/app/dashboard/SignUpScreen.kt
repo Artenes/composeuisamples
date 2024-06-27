@@ -1,4 +1,4 @@
-package dev.artenes.uidesigns.app
+package dev.artenes.uidesigns.app.dashboard
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
