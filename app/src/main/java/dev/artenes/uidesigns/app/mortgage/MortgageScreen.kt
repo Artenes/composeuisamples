@@ -47,6 +47,7 @@ import dev.artenes.uidesigns.R
 fun MortgageScreen() {
 
     val scrollState = rememberScrollState()
+
     var amount by remember {
         mutableStateOf("")
     }
