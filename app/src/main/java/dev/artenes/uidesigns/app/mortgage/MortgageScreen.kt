@@ -3,6 +3,8 @@ package dev.artenes.uidesigns.app.mortgage
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -23,6 +25,11 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -40,6 +47,18 @@ import dev.artenes.uidesigns.R
 fun MortgageScreen() {
 
     val scrollState = rememberScrollState()
+    var amount by remember {
+        mutableStateOf("")
+    }
+    var term by remember {
+        mutableStateOf("")
+    }
+    var rate by remember {
+        mutableStateOf("")
+    }
+    var type by remember {
+        mutableIntStateOf(-1)
+    }
 
     Column(
         modifier = Modifier
@@ -59,7 +78,14 @@ fun MortgageScreen() {
         Text(
             text = "Clear All",
             textDecoration = TextDecoration.Underline,
-            modifier = Modifier.padding(top = 5.dp, start = 25.dp),
+            modifier = Modifier
+                .padding(top = 5.dp, start = 25.dp)
+                .clickable {
+                    amount = ""
+                    term = ""
+                    rate = ""
+                    type = -1
+                },
             color = Color(0xff56636b)
         )
 
@@ -73,8 +99,8 @@ fun MortgageScreen() {
             modifier = Modifier
                 .padding(top = 10.dp, start = 25.dp, end = 25.dp)
                 .fillMaxWidth(),
-            value = "",
-            onValueChange = {},
+            value = amount,
+            onValueChange = { amount = it },
             leadingIcon = {
                 Icon(
                     modifier = Modifier
@@ -98,18 +124,21 @@ fun MortgageScreen() {
             modifier = Modifier
                 .padding(top = 10.dp, start = 25.dp, end = 25.dp)
                 .fillMaxWidth(),
-            value = "",
-            onValueChange = {},
+            value = term,
+            onValueChange = { term = it },
             trailingIcon = {
-                Text(
+                Box(
                     modifier = Modifier
                         .background(Color(0xffe3f4fe))
-                        .padding(vertical = 18.dp)
-                        .padding(end = 5.dp, start = 5.dp),
-                    text = "years",
-                    color = Color(0xff133040),
-                    fontWeight = FontWeight.Bold
-                )
+                        .padding(vertical = 15.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = "years",
+                        color = Color(0xff133040),
+                        fontWeight = FontWeight.Bold,
+                    )
+                }
             }
         )
 
@@ -123,8 +152,8 @@ fun MortgageScreen() {
             modifier = Modifier
                 .padding(top = 10.dp, start = 25.dp, end = 25.dp)
                 .fillMaxWidth(),
-            value = "",
-            onValueChange = {},
+            value = rate,
+            onValueChange = { rate = it },
             trailingIcon = {
                 Icon(
                     modifier = Modifier
@@ -150,13 +179,14 @@ fun MortgageScreen() {
                 .padding(top = 10.dp)
                 .border(
                     width = 1.dp,
-                    color = Color(0xFF122f3c),
+                    color = Color(0xFFb5b2b8),
                     shape = RoundedCornerShape(5.dp)
                 )
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .clickable { type = 1 },
             verticalAlignment = Alignment.CenterVertically
         ) {
-            RadioButton(selected = false, onClick = { })
+            RadioButton(selected = type == 1, onClick = { type = 1 })
             Text(
                 text = "Repayment",
                 fontWeight = FontWeight.Bold,
@@ -170,13 +200,14 @@ fun MortgageScreen() {
                 .padding(top = 10.dp)
                 .border(
                     width = 1.dp,
-                    color = Color(0xFF122f3c),
+                    color = Color(0xFFb5b2b8),
                     shape = RoundedCornerShape(5.dp)
                 )
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .clickable { type = 2 },
             verticalAlignment = Alignment.CenterVertically
         ) {
-            RadioButton(selected = false, onClick = { })
+            RadioButton(selected = type == 2, onClick = { type = 2 })
             Text(
                 text = "Interest Only",
                 fontWeight = FontWeight.Bold,
