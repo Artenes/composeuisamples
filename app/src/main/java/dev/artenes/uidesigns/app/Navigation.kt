@@ -10,11 +10,41 @@ fun MainNavigation() {
 
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = "main") {
+    NavHost(navController = navController, startDestination = "signin") {
 
-        composable("main") {
+        composable("dashboard") {
 
-            //add screen
+            DashboardScreen(
+                goToLogIn = {
+                    navController.navigate("signin")
+                }
+            )
+
+        }
+
+        composable("signin") {
+
+            SignInScreen(
+                goToDashboard = {
+                    navController.navigate("dashboard")
+                },
+                goToSignUp = {
+                    navController.navigate("signup")
+                }
+            )
+
+        }
+
+        composable("signup") {
+
+            SignUpScreen(
+                goToDashboard = {
+                    navController.navigate("dashboard")
+                },
+                goToSignIn = {
+                    navController.navigate("signin")
+                }
+            )
 
         }
 
