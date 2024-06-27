@@ -51,6 +51,9 @@ private fun DashboardScreenPreview() {
 
 }
 
+/**
+ * Sample from https://www.youtube.com/watch?v=RKBmNNovvjE
+ */
 @Composable
 fun DashboardScreen(
     goToLogIn: () -> Unit

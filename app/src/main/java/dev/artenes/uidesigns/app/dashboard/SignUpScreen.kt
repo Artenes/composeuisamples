@@ -50,6 +50,9 @@ private fun SignUpScreenPreview() {
 
 }
 
+/**
+ * Design from https://www.youtube.com/watch?v=RKBmNNovvjE
+ */
 @Composable
 fun SignUpScreen(
     goToDashboard: () -> Unit,

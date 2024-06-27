@@ -42,6 +42,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dev.artenes.uidesigns.R
 
+/**
+ * Design from https://www.frontendmentor.io/challenges/mortgage-repayment-calculator-Galx1LXK73/hub
+ */
 @Preview
 @Composable
 fun MortgageScreen() {

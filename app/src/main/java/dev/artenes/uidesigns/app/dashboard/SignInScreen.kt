@@ -39,6 +39,9 @@ fun SignInScreenPreview() {
 
 }
 
+/**
+ * Design from https://www.youtube.com/watch?v=RKBmNNovvjE
+ */
 @Composable
 fun SignInScreen(
     goToDashboard: () -> Unit,
