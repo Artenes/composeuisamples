@@ -13,6 +13,7 @@ A bunch of simple samples of UI made using compose to practice UI building using
 </p>
 
 Design by [Ui Lover Android](https://www.youtube.com/watch?v=RKBmNNovvjE&t=4s)
+
 [Compose implementation here](app/src/main/java/dev/artenes/uidesigns/app/dashboard)
 
 ## Mortgage calculator
@@ -20,6 +21,7 @@ Design by [Ui Lover Android](https://www.youtube.com/watch?v=RKBmNNovvjE&t=4s)
 <img src="screenshots/mortgage.gif" width="300">
 
 Design by [Frontend Mentor](https://www.frontendmentor.io/challenges/mortgage-repayment-calculator-Galx1LXK73)
+
 [Compose implementation here](app/src/main/java/dev/artenes/uidesigns/app/mortgage)
 
 ## Crypto app
@@ -27,4 +29,5 @@ Design by [Frontend Mentor](https://www.frontendmentor.io/challenges/mortgage-re
 <img src="screenshots/crypto.png" width="300">
 
 Design by [Ui Lover Android](https://www.youtube.com/watch?v=9TzBG9PpV5U)
+
 [Compose implementation here](app/src/main/java/dev/artenes/uidesigns/app/crypto)
