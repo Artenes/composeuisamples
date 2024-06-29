@@ -85,6 +85,19 @@ fun SamplesScreen(navigateTo: (String) -> Unit) {
             )
         }
 
+        Button(
+            onClick = { navigateTo("crypto") },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 24.dp).padding(top = 24.dp)
+        ) {
+            Text(
+                modifier = Modifier.padding(10.dp),
+                text = "Crypto sample",
+                fontWeight = FontWeight.Bold
+            )
+        }
+
 
     }
 
