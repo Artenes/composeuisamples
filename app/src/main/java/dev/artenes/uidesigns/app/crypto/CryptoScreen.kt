@@ -1,7 +1,7 @@
 package dev.artenes.uidesigns.app.crypto
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
@@ -9,6 +9,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
@@ -94,13 +95,15 @@ fun BottomNavigationBar(navController: NavController) {
     val backStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = backStackEntry?.destination
 
-    NavigationBar {
+    NavigationBar(
+        containerColor = Color(0xff171a1f)
+    ) {
 
         screens.forEach { screen ->
 
             NavigationBarItem(
                 icon = {
-                    Icon(
+                    Image(
                         painter = painterResource(id = screen.icon),
                         contentDescription = null
                     )
