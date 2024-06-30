@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dev.artenes.uidesigns.app.SamplesScreen
+import dev.artenes.uidesigns.app.agecalculator.AgeCalculatorScreen
 import dev.artenes.uidesigns.app.crypto.CryptoScreen
 import dev.artenes.uidesigns.app.mortgage.MortgageScreen
 
@@ -69,6 +70,10 @@ fun MainNavigation() {
 
             CryptoScreen()
 
+        }
+
+        composable("age") {
+            AgeCalculatorScreen()
         }
 
     }

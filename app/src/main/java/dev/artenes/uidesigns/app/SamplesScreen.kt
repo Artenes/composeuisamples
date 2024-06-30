@@ -33,72 +33,65 @@ fun SamplesScreen(navigateTo: (String) -> Unit) {
             .background(Color.White)
     ) {
 
-        Button(
-            onClick = { navigateTo("mortgage") },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 24.dp).padding(top = 24.dp)
-        ) {
-            Text(
-                modifier = Modifier.padding(10.dp),
-                text = "Mortgage sample",
-                fontWeight = FontWeight.Bold
-            )
-        }
+        SampleButton(
+            navigateTo,
+            route = "mortgage",
+            label = "Mortgage sample"
+        )
 
-        Button(
-            onClick = { navigateTo("dashboard") },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 24.dp).padding(top = 24.dp)
-        ) {
-            Text(
-                modifier = Modifier.padding(10.dp),
-                text = "Dashboard sample",
-                fontWeight = FontWeight.Bold
-            )
-        }
+        SampleButton(
+            navigateTo,
+            route = "dashboard",
+            label = "Dashboard sample"
+        )
 
-        Button(
-            onClick = { navigateTo("signin") },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 24.dp).padding(top = 24.dp)
-        ) {
-            Text(
-                modifier = Modifier.padding(10.dp),
-                text = "SignIn sample",
-                fontWeight = FontWeight.Bold
-            )
-        }
+        SampleButton(
+            navigateTo,
+            route = "signin",
+            label = "SignIn sample"
+        )
 
-        Button(
-            onClick = { navigateTo("signup") },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 24.dp).padding(top = 24.dp)
-        ) {
-            Text(
-                modifier = Modifier.padding(10.dp),
-                text = "SignUp sample",
-                fontWeight = FontWeight.Bold
-            )
-        }
+        SampleButton(
+            navigateTo,
+            route = "signup",
+            label = "SignUp sample"
+        )
 
-        Button(
-            onClick = { navigateTo("crypto") },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 24.dp).padding(top = 24.dp)
-        ) {
-            Text(
-                modifier = Modifier.padding(10.dp),
-                text = "Crypto sample",
-                fontWeight = FontWeight.Bold
-            )
-        }
+        SampleButton(
+            navigateTo,
+            route = "crypto",
+            label = "Crypto sample"
+        )
 
+        SampleButton(
+            navigateTo,
+            route = "age",
+            label = "Age Calculator sample"
+        )
 
+    }
+
+}
+
+@Composable
+private fun SampleButton(
+    navigateTo: (String) -> Unit,
+    route: String,
+    label: String
+) {
+
+    Button(
+        onClick = { navigateTo(route) },
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 24.dp)
+            .padding(top = 24.dp)
+    ) {
+        Text(
+            modifier = Modifier.padding(10.dp),
+            text = label,
+            fontWeight = FontWeight.Bold
+        )
     }
 
 }

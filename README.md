@@ -31,3 +31,11 @@ Design by [Frontend Mentor](https://www.frontendmentor.io/challenges/mortgage-re
 Design by [Ui Lover Android](https://www.youtube.com/watch?v=9TzBG9PpV5U)
 
 [Compose implementation here](app/src/main/java/dev/artenes/uidesigns/app/crypto)
+
+## Age calculator
+
+<img src="screenshots/age.png" width="300">
+
+Design by [Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q)
+
+[Compose implementation here](app/src/main/java/dev/artenes/uidesigns/app/agecalculator)
